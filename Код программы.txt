@@ -17,7 +17,7 @@ class Tetris extends JFrame {
     final int UP = 38;
     final int RIGHT = 39;
     final int DOWN = 40;
-    final int SHOW_DELAY = 200; // задержка
+    final int SHOW_DELAY = 200; // Г§Г Г¤ГҐГ°Г¦ГЄГ 
     final int[][][] SHAPES = {
         {{0,0,0,0}, {1,1,1,1}, {0,0,0,0}, {0,0,0,0}, {4, 0x00f0f0}}, // I
         {{0,0,0,0}, {0,1,1,0}, {0,1,1,0}, {0,0,0,0}, {4, 0xf0f000}}, // O
@@ -58,7 +58,7 @@ class Tetris extends JFrame {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(FIELD_WIDTH * BLOCK_SIZE + FIELD_DX, FIELD_HEIGHT * BLOCK_SIZE + FIELD_DY);
         frame.setLocation(START_LOCATION, START_LOCATION);
-        frame.setResizable(false);// не изменяемое окно по размерам
+        frame.setResizable(false);// Г­ГҐ ГЁГ§Г¬ГҐГ­ГїГҐГ¬Г®ГҐ Г®ГЄГ­Г® ГЇГ® Г°Г Г§Г¬ГҐГ°Г Г¬
         canvasPanel.setBackground(Color.black);
         
         frame.addKeyListener(new KeyAdapter() {
