@@ -27,7 +27,6 @@ class Tetris extends JFrame {
         {{1,1,1,0}, {0,1,0,0}, {0,0,0,0}, {0,0,0,0}, {3, 0xa000f0}}, // T
         {{1,1,0,0}, {0,1,1,0}, {0,0,0,0}, {0,0,0,0}, {3, 0xf00000}}  // Z
     };
-    final int[] SCORES = {100, 300, 700, 1500};
     int [][] mine = new int[FIELD_HEIGHT + 1][FIELD_WIDTH];
     JFrame frame;
     Canvas canvasPanel = new Canvas();
@@ -57,7 +56,7 @@ class Tetris extends JFrame {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(FIELD_WIDTH * BLOCK_SIZE + FIELD_DX, FIELD_HEIGHT * BLOCK_SIZE + FIELD_DY);
         frame.setLocation(START_LOCATION, START_LOCATION);
-        frame.setResizable(false);// íå èçìåíÿåìîå îêíî ïî ðàçìåðàì
+        frame.setResizable(false);//
         canvasPanel.setBackground(Color.black);
         
         frame.addKeyListener(new KeyAdapter() {
