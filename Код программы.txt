@@ -28,7 +28,6 @@ class Tetris extends JFrame {
         {{1,1,0,0}, {0,1,1,0}, {0,0,0,0}, {0,0,0,0}, {3, 0xf00000}}  // Z
     };
     final int[] SCORES = {100, 300, 700, 1500};
-    int gameScores = 0;
     int [][] mine = new int[FIELD_HEIGHT + 1][FIELD_WIDTH];
     JFrame frame;
     Canvas canvasPanel = new Canvas();
@@ -107,10 +106,6 @@ class Tetris extends JFrame {
                 for (int i = row; i > 0; i--) System.arraycopy(mine[i-1], 0, mine[i], 0, FIELD_WIDTH);
             } else
                 row--;
-        }
-        if (countFillRows > 0) {
-            gameScores += SCORES[countFillRows - 1];
-            setTitle(TITLE_OF_PROGRAM + " : " + gameScores);
         }
     }
     
